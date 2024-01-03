@@ -19,6 +19,8 @@ import com.oozinoz.firework.Rocket;
  * Adapt a collection of rockets for display in a JTable.
  * @author Steven J. Metsker
  */
+
+// TODO: 1/3/2024 3- object adapter sample - JTable fueled with rocket data
 public class RocketTableModel extends AbstractTableModel {
     protected Rocket[] rockets;
     protected String[] columnNames = new String[] { "Name", "Price", "Apogee" };

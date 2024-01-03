@@ -16,6 +16,7 @@ import com.oozinoz.simulation.*;
 /**
 *  An adapter that lets a rocket participate in a simulation.
 */
+// TODO: 1/3/2024 1- class adapter sample 
 public class OozinozRocket extends PhysicalRocket implements RocketSim {
     private double time;
 

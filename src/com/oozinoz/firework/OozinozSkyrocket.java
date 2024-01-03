@@ -18,6 +18,7 @@ import com.oozinoz.simulation.*;
  * from a PhysicalRocket object. This class is an "object adapter" that adapts
  * the PhysicalRocket class to meet the needs of clients of the Skyrocket class.
  */
+// TODO: 1/3/2024 2- object adapter sample
 public class OozinozSkyrocket extends Skyrocket {
     private PhysicalRocket rocket;
 

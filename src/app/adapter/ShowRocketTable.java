@@ -36,6 +36,7 @@ import com.oozinoz.utility.Dollars;
  * 
  * @author Steven J. Metsker
  */
+// TODO: 1/3/2024 3- object adapter sample - JTable fueled with rocket data
 public class ShowRocketTable { 
     public static void main(String[] args) {
         setFonts();
