@@ -21,6 +21,8 @@ import javax.swing.border.TitledBorder;
  * User interface utilities.
  */
 
+// TODO: 1/3/2024 4- Facade sample
+
 public class UI {
 	protected Font font = new Font("Book Antiqua", Font.PLAIN, 18);
 

@@ -19,6 +19,7 @@ import com.oozinoz.function.T;
 import com.oozinoz.ui.PlotPanel;
 import com.oozinoz.ui.UI;
 
+// TODO: 1/3/2024 4- Facade sample
 public class ShowFlight2 {
     /** Show the flight path of a nonexploding aerial shell.
      */
@@ -32,6 +33,13 @@ public class ShowFlight2 {
         
         frame.pack();
         frame.setVisible(true);
+
+        // TODO: 1/4/2024 sample of nested class instantiation 
+        YFunction y = new ShowFlight2().new YFunction();
+        Function[] f = new Function[] {y,y};
+        System.out.println("lenght " + f.length);
+        System.out.println("function is "+ f[0].f(10));
+
     }
 
     private class YFunction extends Function {

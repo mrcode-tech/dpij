@@ -34,6 +34,8 @@ public abstract class Function {
      *            the source function that this function wraps
      */
     public Function(Function f) {
+        // This is commonly used in Java when you want to create an array with initial values without explicitly specifying the array size.
+        // It's a concise way to create and initialize an array in a single line of code.
         this(new Function[] { f });
     }
 
