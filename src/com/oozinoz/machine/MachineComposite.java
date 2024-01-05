@@ -21,6 +21,7 @@ import com.oozinoz.iterator.CompositeIterator;
  * Represent a collection of machines: a manufacturing line, a bay, or a
  * factory.
  */
+// TODO: 1/5/2024 4- composite design pattern
 public class MachineComposite extends MachineComponent {
 
     protected List<MachineComponent> components = new ArrayList<>();

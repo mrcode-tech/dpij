@@ -23,6 +23,7 @@ import com.oozinoz.iterator.ComponentIterator;
  * @author Steven J. Metsker
  *  
  */
+// TODO: 1/5/2024 4- composite design pattern
 public abstract class MachineComponent implements AcycliclyIterable<MachineComponent> {
     protected int id = 0;
     protected String name;
