@@ -16,6 +16,7 @@ package com.oozinoz.controller;
 *  class and an example of an abstraction--a class with 
 *  concrete methods that rely on other, abstract methods.
 */
+// TODO: 1/5/2024 4 - bridge design pattern - first solution
 public abstract class MachineManager
 {
     public abstract void startMachine();

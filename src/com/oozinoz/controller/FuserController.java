@@ -15,6 +15,7 @@ package com.oozinoz.controller;
 *  This class just supports examples in the Bridge chapter.
 *  It doesn't really control a fuser.
 */
+// TODO: 1/5/2024 4 - bridge design pattern - first solution
 public class FuserController
 {
     public void startMachine() {}

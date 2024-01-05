@@ -18,6 +18,7 @@ import com.oozinoz.controller.FuserController;
 *  the MachineManager class to the specific protocol of
 *  a fuser controller.
 */
+// TODO: 1/5/2024 4 - bridge design pattern - second solution - use driver
 public class FuserDriver implements MachineDriver {
     private FuserController controller = new FuserController();
 

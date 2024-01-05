@@ -15,6 +15,7 @@ package com.oozinoz.controller;
 *  This class just supports examples in the Bridge chapter.
 *  It doesn't really control a star press.
 */
+// TODO: 1/5/2024 4 - bridge design pattern - first solution
 public class StarPressController
 {
     public void start() {}

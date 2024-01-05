@@ -13,6 +13,7 @@ package com.oozinoz.controller2;
 
 /** This class is part of the Bridge chapter. 
  */
+// TODO: 1/5/2024 4 - bridge design pattern - second solution - use driver
 public class HskMachineManager2 extends MachineManager2 {
     public HskMachineManager2(MachineDriver driver) {
         super(driver);

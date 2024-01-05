@@ -16,6 +16,7 @@ package com.oozinoz.controller;
 *  the MachineManager class to the specific protocol of
 *  a fuser controller.
 */
+// TODO: 1/5/2024 4 - bridge design pattern - first solution
 public class FuserManager extends MachineManager {
     private FuserController controller = new FuserController();
 

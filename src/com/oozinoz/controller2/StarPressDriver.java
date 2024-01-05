@@ -18,6 +18,7 @@ import com.oozinoz.controller.StarPressController;
  * refactor the MachineController_ hierarchy to use a bridge.
  * @author Steven J. Metsker
  */
+// TODO: 1/5/2024 4 - bridge design pattern - second solution - use driver
 public class StarPressDriver implements MachineDriver {
     private StarPressController controller = new StarPressController();
 

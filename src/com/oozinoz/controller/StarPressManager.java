@@ -16,6 +16,7 @@ package com.oozinoz.controller;
 *  the MachineManager class to the specific protocol of
 *  a star press controller.
 */
+// TODO: 1/5/2024 4 - bridge design pattern - first solution
 public class StarPressManager extends MachineManager {
     private StarPressController controller = new StarPressController();
 

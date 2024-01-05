@@ -16,6 +16,7 @@ package com.oozinoz.controller2;
  * needs.
  * @author Steven J. Metsker
  */
+// TODO: 1/5/2024 4 - bridge design pattern - second solution - use driver
 public interface MachineDriver {
     void startMachine();
     void stopMachine();
