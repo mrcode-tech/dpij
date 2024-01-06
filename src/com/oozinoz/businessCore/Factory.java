@@ -17,6 +17,7 @@ import java.util.*;
  * This class supports various examples that rely on the idea of a central
  * object that represents an Oozinoz factory.
  */
+// TODO: 1/6/2024  Singletone design pattern
 public class Factory {
     private static Factory factory;
 
