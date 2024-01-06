@@ -32,6 +32,13 @@ import com.oozinoz.ui.SwingFacade;
  * 
  * @author Steven J. Metsker
  */
+// TODO: 1/6/2024 observer design pattern - solution 2
+//To create a more fine-grained OBSERVER, you can make a few changes
+//in the code to let each interested component register itself to receive
+//the slider’s change events.
+//In this design, you can move the calls to addChangeListener() out of
+//the slider() method and into the constructors of the dependent
+//components:
 public class ShowBallistics2 {
     protected BallisticsPanel2 burnPanel;
 

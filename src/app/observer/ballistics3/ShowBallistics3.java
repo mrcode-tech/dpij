@@ -27,6 +27,7 @@ import java.awt.GridLayout;
  * 
  * @author Steven J. Metsker
  */
+// TODO: 1/6/2024 observer design pattern - use mvc To consolidate this duplicated code in stateChanged method in solution 2
 public class ShowBallistics3 {
     /**
      * Show the standard burn rate and thrust equations.
@@ -84,11 +85,21 @@ public class ShowBallistics3 {
      * Now the slider just tells the business domain tPeak object that the
      * slider moved.
      */
+    //When the slider
+    //moves, the application sets a new value in the Tpeak object. The panels
+    //and the text box listen to the Tpeak object and update themselves
+    //when the value changes. The BurnRate and Thrust classes use the
+    //Tpeak object to calculate their functions, but they don’t need to listen
+    //to—that is, register for—events.
     protected JSlider slider() {
         if (slider == null) {
             slider = new JSlider();
             sliderMax = slider.getMaximum();
             sliderMin = slider.getMinimum();
+
+            //You also need to arrange for a Tpeak object
+            //to change when the application’s slider changes. You can achieve this
+            //by instantiating an anonymous subclass of ChangeListener.
             slider.addChangeListener(new ChangeListener() {
                 public void stateChanged(ChangeEvent e) {
                     if (sliderMax == sliderMin) return;

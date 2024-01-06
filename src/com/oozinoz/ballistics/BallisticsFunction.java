@@ -16,6 +16,7 @@ package com.oozinoz.ballistics;
  * fill in with a ballistics function. Typically the name of the function will
  * appear as the name of the implementing class, such as BurnRate or Thrust.
  */
+// TODO: 1/6/2024 observer design pattern - define functional interface
 public interface BallisticsFunction {
     /**
      * Implementors provide some function that depends on the ballistics

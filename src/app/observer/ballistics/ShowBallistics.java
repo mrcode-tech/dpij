@@ -29,6 +29,7 @@ import java.awt.GridLayout;
  * 
  * @author Steven J. Metsker
  */
+// TODO: 1/6/2024 observer design pattern
 public class ShowBallistics implements ChangeListener {
     /**
      * Show the standard burn rate and thrust equations.
@@ -75,6 +76,7 @@ public class ShowBallistics implements ChangeListener {
             slider = new JSlider();
             sliderMax = slider.getMaximum();
             sliderMin = slider.getMinimum();
+            // register listener for changing object gui
             slider.addChangeListener(this);
             slider.setValue(slider.getMinimum());
         }
@@ -100,6 +102,7 @@ public class ShowBallistics implements ChangeListener {
     /**
      * The slider moved!
      */
+    // event rise for registred event
     public void stateChanged(ChangeEvent e) {
         double val = slider.getValue();
         double tp = (val - sliderMin) / (sliderMax - sliderMin);

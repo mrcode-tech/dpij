@@ -18,6 +18,7 @@ package com.oozinoz.ballistics;
  * 
  * @version 1.0
  */
+// TODO: 1/6/2024 observer design pattern
 public class Ballistics {
     private static BallisticsFunction rate;
 
@@ -30,6 +31,10 @@ public class Ballistics {
      */
     public static BallisticsFunction rate() {
         if (rate == null) {
+            //lamda for BallisticsFunction functional interface
+            //In Java, you can use lambda expressions to provide a concise way of implementing functional interfaces.
+            //Since BallisticsFunction is a functional interface (an interface with a single abstract method),
+            //you can use lambda expressions to provide implementations for its abstract methods.
             rate = (t, tPeak) -> .5 * Math.pow(25, -Math.pow((t - tPeak), 2));
         }
         return rate;
@@ -42,6 +47,7 @@ public class Ballistics {
      */
     public static BallisticsFunction thrust() {
         if (thrust == null) {
+            //function for BallisticsFunction interface
             thrust = (t, tPeak) -> 1.7 * Math.pow((rate().function(t, tPeak) / .6),
                     (1 / .3));
         }

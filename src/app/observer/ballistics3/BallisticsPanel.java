@@ -57,6 +57,8 @@ public class BallisticsPanel extends JPanel implements Observer {
      * @param arg
      *            ignored
      */
+    //The notifyObservers() method calls the update() method of each
+    //registered observer
     public void update(Observable o, Object arg) {
         tPeak = ((Tpeak) o).getValue();
         repaint();

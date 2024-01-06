@@ -41,6 +41,8 @@ public class BallisticsLabel extends JLabel implements Observer {
      * @param arg
      *            ignored
      */
+    //The notifyObservers() method calls the update() method of each
+    //registered observer
     public void update(Observable obj, Object arg) {
         setText(Format.formatToNPlaces(((Tpeak) obj).getValue(), 2));
         repaint();

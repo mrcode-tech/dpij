@@ -22,6 +22,10 @@ import com.oozinoz.utility.Format;
  * 
  * @author Steven J. Metsker
  */
+// TODO: 1/6/2024 observer design pattern - solution 2
+//To create a more fine-grained OBSERVER, you can make a few changes
+//in the code to let each interested component register itself to receive
+//the slider’s change events.
 public class BallisticsLabel2 extends JLabel implements ChangeListener {
     /**
      * Update the label when the slider moves.
