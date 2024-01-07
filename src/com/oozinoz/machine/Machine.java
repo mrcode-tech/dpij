@@ -26,6 +26,7 @@ import com.oozinoz.utility.Queue;
  * @author Steven J. Metsker
  *  
  */
+// TODO: 1/7/2024  Mediator design pattern - Mediators of Relational Integrity
 public abstract class Machine extends MachineComponent {
 
     protected Queue<Bin> bins = new Queue<>();

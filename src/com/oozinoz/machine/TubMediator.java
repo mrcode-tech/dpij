@@ -18,6 +18,7 @@ import java.util.*;
  * @author Steven J. Metsker
  *  
  */
+// TODO: 1/7/2024  Mediator design pattern - Mediators of Relational Integrity
 public class TubMediator {
     protected Map<Tub, Machine> tubToMachine = new HashMap<>();
 

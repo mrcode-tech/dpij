@@ -17,7 +17,7 @@ import java.awt.event.ActionListener;
 import javax.swing.JList;
 import javax.swing.event.ListSelectionEvent;
 import javax.swing.event.ListSelectionListener;
-
+// TODO: 1/7/2024  Mediator design pattern
 public class MoveATubMediator implements ListSelectionListener, ActionListener {
     MoveATub2 gui;
     NameBase data;

@@ -20,6 +20,7 @@ import com.oozinoz.ui.UI;
  * This class is refactored, show a mediator class, factoring the action logic
  * out of this class.
  */
+// TODO: 1/7/2024  Mediator design pattern
 public class MoveATub2 extends JPanel {
     private NameBase data = new NameBase();
 

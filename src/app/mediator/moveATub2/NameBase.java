@@ -10,7 +10,7 @@ package app.mediator.moveATub2;
  * Please use this software as you wish with the sole
  * restriction that you may not claim that you wrote it.
  */
-
+// TODO: 1/7/2024  Mediator design pattern
 import java.util.*;
 
 public class NameBase {

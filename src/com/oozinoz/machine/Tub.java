@@ -17,6 +17,7 @@ package com.oozinoz.machine;
 *  model that helps show how to manage a one-to-many
 *  relation in an object model.
 */
+// TODO: 1/7/2024  Mediator design pattern - Mediators of Relational Integrity
 public class Tub {
     private String id;
 
