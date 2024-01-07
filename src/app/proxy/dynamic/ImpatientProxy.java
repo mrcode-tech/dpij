@@ -8,6 +8,8 @@ import java.lang.reflect.*;
  * However, if any method takes a long time to execute, this class will print a
  * warning message.
  */
+
+// TODO: 1/7/2024  Proxy design pattern - Dynamic Proxies
 public class ImpatientProxy implements InvocationHandler {
 
     private Object obj;
@@ -17,6 +19,11 @@ public class ImpatientProxy implements InvocationHandler {
      * @param obj the object to wrap
      * @return the proxy
      */
+
+    //The Proxy class will need
+    //a list of interfaces and a class loader, as well as an instance of
+    //ImpatientProxy. To simplify the creation of a dynamic proxy, we
+    //might add the following method
     public static Object newInstance(Object obj) {
         ClassLoader loader = obj.getClass().getClassLoader();
         Class<?>[] classes = obj.getClass().getInterfaces();
@@ -34,6 +41,8 @@ public class ImpatientProxy implements InvocationHandler {
     public Object invoke(Object proxy, Method m, Object[] args) throws Throwable {
         Object result;
         long t1 = System.currentTimeMillis();
+        //The beauty of dynamic proxies is that you can add any behavior
+        //you like before or after executing this line.
         result = m.invoke(obj, args);
         long t2 = System.currentTimeMillis();
         if (t2 - t1 > 10) {

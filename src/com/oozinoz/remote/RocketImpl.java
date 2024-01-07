@@ -18,6 +18,10 @@ import java.rmi.server.UnicastRemoteObject;
  * This class demonstrates how to implement an RMI interface.
  * @author Steven J. Metsker
  */
+
+// TODO: 1/7/2024  Proxy design pattern - sample of rmi
+// use command rmic com.oozinoz.remote.RocketImpl to create RocketImpl_Stub.class
+
 public class RocketImpl extends UnicastRemoteObject implements Rocket {
     protected double price;
     protected double apogee;

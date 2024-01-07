@@ -3,6 +3,7 @@ package app.proxy.dynamic;
 /**
  * An example of a class with a method that takes too long to execute.
  */
+// TODO: 1/7/2024  Proxy design pattern - Dynamic Proxies
 public class BadApple {
     public String name;
 
@@ -31,6 +32,7 @@ public class BadApple {
      */
     public int hashCode() {
         try {
+            // fialed sample
             Thread.sleep(1200);
         } catch (InterruptedException ignored) {
         }

@@ -19,6 +19,10 @@ import javax.swing.JFrame;
  * image, a 'loading' image, and the target image.
  * @author Steven J. Metsker
  */
+// TODO: 1/7/2024  Proxy design pattern - second approach
+//    The revised code is less coupled to the design of ImageIcon, relying
+//    primarily on getImage() and setImage() rather than on the mechanics
+//    of which methods to forward.
 public class LoadingImageIcon extends ImageIcon implements Runnable {
     static final ImageIcon ABSENT = new ImageIcon(ClassLoader.getSystemResource("resources/images/absent.jpg"));
     static final ImageIcon LOADING = new ImageIcon(ClassLoader.getSystemResource("resources/images/loading.jpg"));
@@ -39,6 +43,7 @@ public class LoadingImageIcon extends ImageIcon implements Runnable {
      * Load the desired image and call back the provided frame when done.
      * @param callbackFrame the frame to repaint when the image is loaded
      */
+    // in this class, existing ImageIcon object used
     public void load(JFrame callbackFrame) {
         this.callbackFrame = callbackFrame;
         setImage(LOADING.getImage());

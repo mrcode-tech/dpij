@@ -21,7 +21,11 @@ import javax.swing.*;
  * @author Steven J. Metsker
  * @see LoadingImageIcon
  */
+// TODO: 1/7/2024  Proxy design pattern - first approach
 public class ImageIconProxy extends ImageIcon implements Runnable {
+//    in ImageIcon classe transient means:
+//    In Java, the transient keyword is used as a modifier for instance variables. When applied to a variable,
+//    it indicates that the variable should not be included in the default serialization process.
     static final ImageIcon ABSENT = new ImageIcon(ClassLoader.getSystemResource("resources/images/absent.jpg"));
     static final ImageIcon LOADING = new ImageIcon(ClassLoader.getSystemResource("resources/images/loading.jpg"));
     ImageIcon current = ABSENT;
@@ -52,6 +56,7 @@ public class ImageIconProxy extends ImageIcon implements Runnable {
     /**
      * Load the desired image (presumably in a separate thread).
      */
+    // in this class, new ImageIcon object used
     public void run() {
         current = new ImageIcon(ClassLoader.getSystemResource(filename));
         callbackFrame.pack();

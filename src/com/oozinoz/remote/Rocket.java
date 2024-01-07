@@ -19,6 +19,8 @@ import java.rmi.*;
  * packages.
  * @author Steve Metsker
  */
+
+// TODO: 1/7/2024  Proxy design pattern - sample of rmi
 public interface Rocket extends Remote {
     /**
      * Set a factor to adjust a particular rocket's apogee.

@@ -18,6 +18,12 @@ import java.rmi.*;
  * machine.
  * @author Steven J. Metsker
  */
+
+// TODO: 1/7/2024  Proxy design pattern - sample of rmi
+// client side
+//A client that runs on
+//another machine can access biggie if the client has access to the
+//Rocket interface and the RocketImpl_Stub class
 public class ShowRocketClient {
     /**
      * Show how a program on one machine can interact with an object on another
