@@ -15,6 +15,7 @@ package com.oozinoz.machine;
  * Represent a component that has no parent, typically a factory.
  * @author Steven J. Metsker
  */
+// TODO: 1/7/2024  Chain of Responsibility design pattern - after refactoring
 public class MachineRoot extends MachineComposite {
     /**
      * Create a root component with the given responsible engineer.

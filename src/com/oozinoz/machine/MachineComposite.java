@@ -22,6 +22,8 @@ import com.oozinoz.iterator.CompositeIterator;
  * factory.
  */
 // TODO: 1/5/2024 4- composite design pattern
+
+// TODO: 1/7/2024  Chain of Responsibility design pattern - after refactoring
 public class MachineComposite extends MachineComponent {
 
     protected List<MachineComponent> components = new ArrayList<>();

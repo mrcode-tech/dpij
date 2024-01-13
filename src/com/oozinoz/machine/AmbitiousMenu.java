@@ -18,6 +18,7 @@ package com.oozinoz.machine;
  * refactored so that the domain objects determine who is the responsible
  * engineer.
  */
+// TODO: 1/7/2024  Chain of Responsibility design pattern - before refactoring
 public class AmbitiousMenu {
     /**
      * @param item The interesting item

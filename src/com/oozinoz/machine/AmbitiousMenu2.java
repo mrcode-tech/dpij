@@ -15,6 +15,7 @@ package com.oozinoz.machine;
  * This class shows the value of refactoring the AmbitiousMenu class using Chain
  * of Responsibility.
  */
+// TODO: 1/7/2024  Chain of Responsibility design pattern - after refactoring
 public class AmbitiousMenu2 {
     /**
      * @param item The interesting item

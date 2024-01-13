@@ -117,6 +117,7 @@ public abstract class MachineComponent implements AcycliclyIterable<MachineCompo
     /**
      * @return the engineer who is responsible for this machine
      */
+    // TODO: 1/7/2024  Chain of Responsibility design pattern - after refactoring
     public Engineer getResponsible() {
         if (responsible != null)
             return responsible;

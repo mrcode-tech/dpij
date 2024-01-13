@@ -14,6 +14,7 @@ package com.oozinoz.machine;
 /**
 *  Represent a tool cart.
 */
+// TODO: 1/7/2024  Chain of Responsibility design pattern - after refactoring
 public class ToolCart implements VisualizationItem {
     protected Engineer responsible;
 

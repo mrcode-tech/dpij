@@ -15,6 +15,7 @@ package com.oozinoz.machine;
  * Represent a tool in an Oozinoz factory. Tools are like machines but are less
  * stationary. They roll around on tool carts.
  */
+// TODO: 1/7/2024  Chain of Responsibility design pattern - after refactoring
 public class Tool implements VisualizationItem {
     protected ToolCart toolCart;
 

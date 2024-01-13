@@ -16,6 +16,7 @@ package com.oozinoz.machine;
  *  simulation that the "Chain of Responsibility" chapter in 
  *  "Design Patterns in Java" discusses.
  */
+// TODO: 1/7/2024  Chain of Responsibility design pattern - after refactoring
 public interface VisualizationItem {
     /**
      *  Return the engineer who is responsible for the machine
