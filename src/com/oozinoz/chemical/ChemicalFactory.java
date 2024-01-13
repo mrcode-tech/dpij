@@ -17,6 +17,7 @@ import java.util.*;
  * This class creates and returns Chemical objects. We will refactor this class
  * to make Chemical an interface.
  */
+// TODO: 1/13/2024 Flyweight design pattern - The code for ChemicalFactory can use a static initializer to store Chemical objects in a Hashtable
 public class ChemicalFactory {
     private static Map<String, Chemical> chemicals = new HashMap<>();
 

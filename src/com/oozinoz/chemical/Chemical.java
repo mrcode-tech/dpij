@@ -14,6 +14,7 @@ package com.oozinoz.chemical;
 /**
  * This class represents a type of chemical.
  */
+// TODO: 1/13/2024 Flyweight design pattern - The code for ChemicalFactory can use a static initializer to store Chemical objects in a Hashtable
 public class Chemical {
     private String name;
 
@@ -31,6 +32,15 @@ public class Chemical {
      * @param atomicWeight
      *            The atomic weight of this substance (101 for saltpeter).
      */
+
+    //One way that won’t work is to make the Chemical constructor private.
+    //That would prevent the ChemicalFactory class from instantiating
+    //the Chemical class.
+
+    //To help prevent developers from instantiating the Chemical class
+    //themselves, you could place Chemical and ChemicalFactory classes
+    //in the same package and give the Chemical class’s constructor default
+    //(“package”) access.
     Chemical(String name, String symbol, double atomicWeight) {
         this.name = name;
         this.symbol = symbol;
