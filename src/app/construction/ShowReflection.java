@@ -13,6 +13,11 @@ package app.construction;
 
 import java.awt.Point;
 import java.lang.reflect.Constructor;
+// TODO: 1/14/2024 Relection :  The most common way to instantiate objects is by invoking the new
+//operator, but you can also use reflection. Reflection provides the ability
+//to work with types and type members as objects. Even if you do
+//not use reflection frequently, you may be able to follow the logic of a
+//working program that relies on reflection, such as the following:
 
 public class ShowReflection {
 
