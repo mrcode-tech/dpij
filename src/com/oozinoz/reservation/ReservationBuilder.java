@@ -19,6 +19,7 @@ import com.oozinoz.utility.Dollars;
 *  Subclasses of this abstract class validate a reservation's
 *  attributes before constructing a Reservation object.
 */
+// TODO: 1/7/2024 Builder design pattern
 public abstract class ReservationBuilder {
     public static final int MINHEAD = 25;
 

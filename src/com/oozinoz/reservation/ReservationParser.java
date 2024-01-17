@@ -33,6 +33,7 @@ import com.oozinoz.utility.Dollars;
  * day. This parser assumes the year for the date is the year in which the date
  * next occurs.
  */
+// TODO: 1/7/2024 Builder design pattern
 public class ReservationParser {
     private ReservationBuilder builder;
 

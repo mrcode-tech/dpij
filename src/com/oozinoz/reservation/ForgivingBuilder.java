@@ -19,6 +19,7 @@ import com.oozinoz.utility.Dollars;
 *  set. This builder must receive a city and a date, but it
 *  will set reasonable values for the other reservation values.
 */
+// TODO: 1/7/2024 Builder design pattern
 public class ForgivingBuilder extends ReservationBuilder {
     public Reservation build() throws BuilderException {
         boolean noHeadcount = (headcount == 0);

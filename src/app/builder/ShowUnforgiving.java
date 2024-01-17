@@ -10,6 +10,7 @@ package app.builder;
 
 import com.oozinoz.reservation.*;
 
+// TODO: 1/7/2024 Builder design pattern
 public class ShowUnforgiving {
     public static void main(String[] args) {
         /* Remove "DollarsPerHead, 9.95" to see exception message when that field is omitted. */

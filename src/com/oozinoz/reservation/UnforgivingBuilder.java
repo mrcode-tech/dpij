@@ -16,6 +16,7 @@ package com.oozinoz.reservation;
  * <code>build</code> method throws an exception if asked to build in advance
  * of having valid parameters for a reservation.
  */
+// TODO: 1/7/2024 Builder design pattern
 public class UnforgivingBuilder extends ReservationBuilder {
     /**
      * Create a valid reservation. Throw an exception if any required attribute
