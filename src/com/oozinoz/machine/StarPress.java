@@ -75,6 +75,7 @@ public class StarPress extends Machine {
     /**
      * @return a planner that knows how star presses operate
      */
+    // TODO: 1/18/2024  FACTORY METHOD Design Pattern
     public MachinePlanner createPlanner() {
         return new StarPressPlanner(this); 
     }

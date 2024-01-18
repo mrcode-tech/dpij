@@ -17,6 +17,7 @@ import com.oozinoz.utility.Dollars;
  * This interface defines the common behaviors for online and offline credit
  * check classes.
  */
+// TODO: 1/17/2024  FACTORY METHOD Design Pattern
 public interface CreditCheck {
     /**
      * @return the acceptable credit limit for the person with the supplied

@@ -17,6 +17,7 @@ import com.oozinoz.utility.Dollars;
 *  Objects of this class check credit by dialing out to
 *  credit service bureaus.
 */
+// TODO: 1/17/2024  FACTORY METHOD Design Pattern
 public class CreditCheckOnline implements CreditCheck {
     /**
     *  @param id the customer ID

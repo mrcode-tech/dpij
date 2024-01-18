@@ -130,6 +130,14 @@ public abstract class Machine extends MachineComponent {
      * 
      * @return a planner for this machine
      */
+    // TODO: 1/18/2024  FACTORY METHOD Design Pattern
+    //The Fuser and Mixer classes can rely on inheriting this method,
+    //whereas the ShellAssembler and StarPress class will need to override it
+
+    //These methods show the FACTORY METHOD pattern at work. When we
+    //need a planner object, we call the createPlanner() method of the
+    //machine we want to plan for. The specific planner that we receive
+    //depends on the machine.
     public MachinePlanner createPlanner() {
         return new BasicPlanner(this);
     }

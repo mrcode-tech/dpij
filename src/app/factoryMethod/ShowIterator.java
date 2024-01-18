@@ -18,6 +18,17 @@ import java.util.*;
  * 
  * @author Steven J. Metsker
  */
+
+// TODO: 1/17/2024 Factory Method design pattern -- ITERATOR
+//A Classic Example: Iterators
+//The ITERATOR pattern provides a way to access the elements of a collection
+//sequentially. (See Chapter 28, ITERATOR.) But the way iterators are
+//created often uses a FACTORY METHOD. Java JDK version 1.2 introduced
+//a Collection interface that includes an iterator() method; all collections
+//implement this operation. The iterator() isolates its caller
+//from knowing which class to instantiate.
+//An iterator() method creates an object that returns a sequence of
+//the elements of a collection
 public class ShowIterator {
     public static void main(String[] args) {
         List<String> list = Arrays.asList("fountain", "rocket", "sparkler");
@@ -29,6 +40,6 @@ public class ShowIterator {
         }
         
         // Uncomment the next line to see the iterator's actual class:
-        // System.out.println(iter.getClass().getName());
+         System.out.println(iter.getClass().getName());
     }
 }

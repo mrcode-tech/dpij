@@ -18,6 +18,7 @@ package com.oozinoz.machine;
  *  
  */
 // TODO: 1/7/2024  Mediator design pattern - Mediators of Relational Integrity
+// TODO: 1/18/2024  FACTORY METHOD Design Pattern
 public class Fuser extends Machine {
     /**
      * Create a fuser with the given id and with the given parent

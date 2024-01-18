@@ -17,6 +17,7 @@ import com.oozinoz.utility.Dollars;
 *  Objects of this class check credit using a series of
 *  agent/customer dialogs.
 */
+// TODO: 1/17/2024  FACTORY METHOD Design Pattern
 public class CreditCheckOffline implements CreditCheck {
     /**
     *  @return the acceptable credit limit for the person

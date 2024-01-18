@@ -17,6 +17,7 @@ package com.oozinoz.machine;
  * @author Steven J. Metsker
  *  
  */
+// TODO: 1/18/2024  FACTORY METHOD Design Pattern
 public class Mixer extends Machine {
     /**
      * Create a mixer with the given id and with the supplied parent machine.
