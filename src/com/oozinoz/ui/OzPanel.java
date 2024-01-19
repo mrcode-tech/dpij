@@ -16,8 +16,16 @@ public class OzPanel extends JPanel implements Cloneable {
         return (OzPanel) this.clone();
     }
 
+    //Note that to use clone(), you must declare that your class implements Cloneable.
+    // This marker interface has no methods but serves as a flag
+    //to indicate that you’re intentionally supporting clone().
     public Object clone() {
         try {
+            //The problem with this code is
+            //that the clone() method will create copies of all the attributes of a
+            //JPanel object, regardless of whether you understand the function of
+            //those attributes.
+
             return super.clone();
         } catch (CloneNotSupportedException ignored) {
             throw new InternalError("OzPanel.clone() failed");
@@ -25,6 +33,9 @@ public class OzPanel extends JPanel implements Cloneable {
     }
 
     public OzPanel copy2() {
+
+        //OzPanel.copy2() method that copies a panel without
+        //relying on clone()
         OzPanel result = new OzPanel();
         result.setBackground(this.getBackground());
         result.setForeground(this.getForeground());
