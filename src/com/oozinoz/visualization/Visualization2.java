@@ -18,7 +18,9 @@ import com.oozinoz.ui.*;
 /**
  * This version of the visualization adds a menu that
  * provides for saving and restoring mementos from a file.
- */ 
+ */
+
+// TODO: 1/19/2024 Persisting Mementos Across Sessions
 public class Visualization2 extends Visualization {
     public static void main(String[] args) {
         Visualization2 panel = new Visualization2(UI.NORMAL);
@@ -58,6 +60,7 @@ public class Visualization2 extends Visualization {
         return menuBar;
     }
 
+    //An easy way to store an object, such as the factory model’s topmost configuration, is to serialize it.
     public void save() {
         try {
             mediator.save(this);

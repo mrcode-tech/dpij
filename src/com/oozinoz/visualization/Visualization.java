@@ -24,6 +24,16 @@ import com.oozinoz.ui.UI;
  *  functionality is the ability to create and drag machines. In the
  *  future we'll add operational modeling functions.
  */
+
+// TODO: 1/19/2024 Memento Design Pattern
+//This design divides the application’s work into separate classes for
+//modeling the factory, providing GUI elements, and handling a user’s clicks.
+
+//The MVC design separates the tasks of translating user actions from the tasks of maintaining the GUI
+//The Visualizationclass creates its GUI controls but passes off the handling of GUI events to a mediator
+
+//The visualization changes factory events into GUI changes.
+//The mediator translates GUI events into factory changes.
 public class Visualization extends JPanel implements ChangeListener {
 	protected UI ui;
 
@@ -82,6 +92,8 @@ public class Visualization extends JPanel implements ChangeListener {
 			undoButton = ui.createButtonCancel();
 			undoButton.setText("Undo");
 			undoButton.setEnabled(false);
+			//This code passes responsibility for handling a click to the mediator.
+			//The mediator informs the factory model of any requested changes
 			undoButton.addActionListener(mediator.undoAction());
 		}
 		return undoButton;
@@ -97,6 +109,11 @@ public class Visualization extends JPanel implements ChangeListener {
 		return result; 
 	}
 
+	//The stateChanged() method must clear all the picture
+	//box controls from the machine panel, and re-add new picture
+	//boxes from the current set of locations in the factory model. The
+	//stateChanged() method must also disable the Undo button if the factory
+	//has only a single memento left on its stack.
 	public void stateChanged(ChangeEvent e) {
 		machinePanel().removeAll();
 

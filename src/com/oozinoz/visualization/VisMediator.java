@@ -31,6 +31,12 @@ import javax.swing.JFileChooser;
 /** 
  * This class handles the UI events for the Visualization class
  */
+
+// TODO: 1/19/2024 Memento Design Pattern
+
+//The VisMediator class translates GUI events
+//into appropriate changes in the factory model. When the model
+//changes, the GUI may need to update.
 public class VisMediator {
     public static final Point DEFAULT_LOCATION = new Point(10, 10);
 
@@ -147,6 +153,9 @@ public class VisMediator {
         try {
             out = new FileOutputStream(dialog.getSelectedFile());
             s = new ObjectOutputStream(out);
+            //An easy way to store an object, such as the factory model’s topmost configuration, is to serialize it.
+            //write object to the file -> s.writeObject
+            //we used Java serialization to write to a file in binary format
             s.writeObject(factoryModel.getLocations());
         } finally {
             if (s != null)
@@ -167,6 +176,7 @@ public class VisMediator {
         try {
             out = new FileInputStream(dialog.getSelectedFile());
             s = new ObjectInputStream(out);
+            //read object from file -> s.readObject()
             @SuppressWarnings("unchecked") List<Point> list = (List<Point>) s.readObject();
             factoryModel.setLocations(list);
         } finally {

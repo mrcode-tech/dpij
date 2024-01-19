@@ -23,7 +23,21 @@ import javax.swing.event.ChangeListener;
  *  machine locations. However, the factory also provides support
  *  for undo by storing off mementos each time the factory
  *  configuration changes.
- */ 
+ */
+
+// TODO: 1/19/2024 Memento Design Pattern
+//The intent of the MEMENTO pattern is to provide storage and restoration
+//of an object’s state.
+
+//The FactoryModel class is at the center of our design. It is responsible
+//for maintaining the current configuration of machines and for maintaining
+//mementos of previous configurations.
+
+//Each time a client asks the factory to add or move a machine, the factory
+//will create a copy—a memento—of its current locations and
+//push this onto its stack of mementos. In this example, we do not
+//need a special Memento class. Each memento is merely a list of points:
+//the list of machine locations at a particular time.
 public class FactoryModel {
 	private Stack<List<Point>> mementos;
 
@@ -35,8 +49,14 @@ public class FactoryModel {
 	}
 
 	public void add(Point location) {
+		//peek : Looks at the object at the top of this stack without removing it from the stack.
         List<Point> oldLocs = mementos.peek();
 		List<Point> newLocs = new ArrayList<>(oldLocs);
+		//Inserts the specified element at the specified position in this list
+		//A subtlety here is that the code ensures that the new machine is first in
+		//this list. This is a clue to the visualization that a picture of this
+		//machine should appear in front of any other machines that the
+		//picture may overlap.
 		newLocs.add(0, location);
 
 		mementos.push(newLocs);
@@ -58,12 +78,15 @@ public class FactoryModel {
     }
 
 	public void undo() {
+		//The top of the stack is always the current state, so the undo() code has only to pop the stack to
+		//expose the previous memento.
 		if (!canUndo()) return;
 
 		mementos.pop();
 		notifyListeners();
 	}
 
+	//The factory model’s latest configuration is always available from getLocations()
 	public List<Point> getLocations() {
 		return mementos.peek();
 	}
