@@ -20,6 +20,7 @@ import com.oozinoz.visualization.Visualization;
 /** Show the use of an alternative GUI kit (an alternative
   * abstract factory).
  */
+// TODO: 1/18/2024  ABSTRACT FACTORY Design Pattern - with Beta UI
 public class ShowBetaVisualization
 {
     public static void main(String[] args) 

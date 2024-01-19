@@ -13,6 +13,7 @@ package app.abstractFactory;
 
 import javax.swing.JPanel;
 
+import com.oozinoz.ui.BetaUI;
 import com.oozinoz.ui.SwingFacade;
 import com.oozinoz.ui.UI;
 import com.oozinoz.visualization.Visualization;
@@ -20,8 +21,16 @@ import com.oozinoz.visualization.Visualization;
 /** Show the use of an alternative GUI kit (an alternative
  *  abstract factory).
 */
+// TODO: 1/18/2024  ABSTRACT FACTORY Design Pattern
+//Suppose that we release a version of the Visualization class with
+//new features, and while this code is in beta test, we want to change
+//the user interface
+
 public class ShowVisualization {
     public static void main(String[] args) {
+//        BetaUI betaUI = new BetaUI();
+//        JPanel panel = new Visualization(betaUI);
+
         JPanel panel = new Visualization(UI.NORMAL);
         SwingFacade.launch(panel, "Operational Model");
     }
