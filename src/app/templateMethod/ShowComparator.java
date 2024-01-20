@@ -15,6 +15,7 @@ import java.util.Arrays;
 import com.oozinoz.firework.Rocket;
 import com.oozinoz.utility.Dollars;
 
+// TODO: 1/20/2024 TEMPLATE METHOD Design Pattern - sort
 public class ShowComparator {
     
     public static void main(String[] args) {
@@ -25,6 +26,11 @@ public class ShowComparator {
         Rocket[] rockets = new Rocket[] { r1, r2, r3, r4 };
         
         System.out.println("Sorted by apogee: ");
+        //The sort() methods and the Comparator interface
+        //let you supply a specific step to a general sorting algorithm.
+        //TEMPLATE METHOD is not restricted to the case in which only the missing step is domain specific. Sometimes, the entire algorithm applies
+        //to a specific application domain
+
         Arrays.sort(rockets, new ApogeeComparator());
         for (Rocket rocket : rockets) {
             System.out.println(rocket);

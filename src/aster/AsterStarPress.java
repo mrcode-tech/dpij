@@ -19,6 +19,7 @@ package aster;
  * The "Template Method" chapter in "Design Patterns in C#" describes this
  * class.
  */
+// TODO: 1/20/2024 TEMPLATE METHOD Design Pattern -Completing an Algorithm - AsterStarPress
 public abstract class AsterStarPress {
     protected int currentMoldID;
 

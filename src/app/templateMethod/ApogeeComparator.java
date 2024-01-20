@@ -14,6 +14,7 @@ package app.templateMethod;
 import java.util.Comparator;
 import com.oozinoz.firework.Rocket;
 
+// TODO: 1/20/2024 TEMPLATE METHOD Design Pattern - sort
 public class ApogeeComparator implements Comparator<Rocket> {
     public int compare(Rocket r1, Rocket r2) {
         return Double.compare(r1.getApogee(), r2.getApogee());

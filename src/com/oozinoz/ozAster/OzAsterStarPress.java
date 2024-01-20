@@ -15,6 +15,7 @@ import aster.AsterStarPress;
 
 import com.oozinoz.businessCore.*;
 
+// TODO: 1/20/2024 TEMPLATE METHOD Design Pattern - Completing an Algorithm - AsterStarPress
 public class OzAsterStarPress extends AsterStarPress {
     /**
     *  Override the superclass to have our robot collect the
@@ -38,6 +39,8 @@ public class OzAsterStarPress extends AsterStarPress {
     *  mold is only partly processed.
     *  @param id which mold
     */
+    //Write the code for the markMoldIncomplete() method of the
+    //OzAsterStarPress class:
     public void markMoldIncomplete(int id) {
         getManager().setMoldIncomplete(id);
     }
