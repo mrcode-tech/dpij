@@ -17,6 +17,8 @@ import com.oozinoz.firework.Firework;
  * Implement the Advisor interface by relying on the LikeMyStuff engine that
  * models a customer's preferences on his or her eariler purchases.
  */
+
+// TODO: 1/21/2024 STRATEGY Design Pattern - using startegy
 public class ItemAdvisor implements Advisor {
     /**
      * @return Recommend a nice item for this customer, based on a model of the

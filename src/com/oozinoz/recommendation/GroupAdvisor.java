@@ -17,6 +17,7 @@ import com.oozinoz.firework.Firework;
  * Implement the Advisor interface by relying on the Rel8 engine that relates a
  * customer's preferences to other customers' tastes.
  */
+// TODO: 1/21/2024 STRATEGY Design Pattern - using startegy
 public class GroupAdvisor implements Advisor {
     /**
      * @return Recommend a nice item for this customer, based on how this

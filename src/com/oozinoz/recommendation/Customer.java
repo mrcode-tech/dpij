@@ -40,6 +40,21 @@ public class Customer {
      * firework. In short it's an example of finding and reading from a
      * properties file.
      */
+
+    //This code is in the com.oozinoz.recommendation package of the Oozinoz
+    //code base available from www.oozinoz.com. The getRecommended()
+    //method expects that if a promotion is on, it will be named in a
+    //strategy.dat file in a config directory. Such a file would look as
+    //follows:
+    //promote=JSquirrel
+    //It there is no such file, the getRecommended() code will use the Rel8
+    //engine if the customer is registered. If there is no promotion strategy
+    //file and the customer is not registered, the code will use the Like-
+    //MyStuff engine if the customer has spent a certain amount of money
+    //in the past year. If no better recommendation is possible, the code
+    //selects and recommends a firework at random. The method works,
+    //and you might feel that this is not the worst code you’ve ever seen.
+    //But we can certainly make it better.
     public static void main(String[] args) {
         Firework recommendation = new Customer().getRecommended();
         System.out.println("Customer recommendation: " + recommendation.toString());
@@ -48,6 +63,7 @@ public class Customer {
     /**
      * @return a firework to recommend to this customer.
      */
+    // TODO: 1/21/2024 without STRATEGY Design Pattern - read properties file
     public Firework getRecommended() {
         // if we're promoting a particular firework, return it
         try {
@@ -69,6 +85,7 @@ public class Customer {
             return (Firework) Rel8.advise(this);
         }
 
+        // TODO: 1/21/2024 STRATEGY Design Pattern - work with calender instance
         // check spending over the last year
         Calendar cal = Calendar.getInstance();
         cal.add(Calendar.YEAR, -1);

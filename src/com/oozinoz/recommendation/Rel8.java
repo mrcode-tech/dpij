@@ -17,6 +17,9 @@ import com.oozinoz.firework.Firework;
  * This class is just a mock-up, acting as if it were a recommendation engine
  * that relies on customer profiling for its suggestions.
  */
+// TODO: 1/21/2024 STRATEGY Design Pattern
+//The LikeMyStuff and Rel8 engines both accept a Customer object,
+//and both suggest something to advertise to the customer
 public class Rel8 {
     /**
      * Recommend a nice item for this customer, based on how this customer's

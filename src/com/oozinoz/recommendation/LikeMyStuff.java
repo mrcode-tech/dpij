@@ -11,6 +11,9 @@ package com.oozinoz.recommendation;
  * restriction that you may not claim that you wrote it.
  */
 
+// TODO: 1/21/2024 STRATEGY Design Pattern
+//The LikeMyStuff and Rel8 engines both accept a Customer object,
+//and both suggest something to advertise to the customer
 import com.oozinoz.firework.Firework;
 
 /**

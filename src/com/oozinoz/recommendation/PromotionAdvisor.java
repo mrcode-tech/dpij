@@ -20,6 +20,8 @@ import com.oozinoz.firework.Firework;
  * 
  * @author Steven J. Metsker
  */
+
+// TODO: 1/21/2024 STRATEGY Design Pattern - using startegy
 public class PromotionAdvisor implements Advisor {
     private Firework promoted;
 

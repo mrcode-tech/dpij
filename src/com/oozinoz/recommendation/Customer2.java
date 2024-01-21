@@ -22,6 +22,14 @@ import com.oozinoz.firework.Firework;
  * extends Customer only so it can be passed in to Rel8 and LikeMyStuff. In
  * reality, you would replace the Customer class with this one.
  */
+// TODO: 1/21/2024 STRATEGY Design Pattern - using startegy
+
+//The Advisor interface declares that a class that implements the interface
+//can accept a customer and recommend a firework. The next step
+//in refactoring the Customer class’s getRecommended() code is to create
+//classes that each represent one of the recommendation strategies.
+//Each class will provide a different implementation of the recommend()
+//method that the Advisor interface specifies.
 public class Customer2 extends Customer {
     private Advisor advisor;
 
@@ -57,11 +65,28 @@ public class Customer2 extends Customer {
      * @return a firework to recommend to this customer. This method is
      *         refactored to employ the Strategy pattern.
      */
+
+    //The advisor classes translate calls to recommend() into the interfaces
+    //that the underlying engines require. For example, the GroupAdvisor
+    //class translates calls to recommend() into the advise() interface that
+    //the Rel8 engine requires
     public Firework getRecommended() {
         Firework recommend = getAdvisor().recommend(this);
         return recommend;
     }
 
+
+    //The refactoring of Customer separates the selection of a strategy from
+    //the use of the strategy. An advisor attribute of a Customer object
+    //holds the current choice of the strategy to apply. The refactored
+    //Customer2 class lazy-initializes this attribute with logic that reflects
+    //Oozinoz’s advertising policies:
+    //this part is for selecting startegy...
+
+    //This selection code may be complex even after refactoring, but
+    //you should be able to reduce this code so that it is nearly equivalent
+    //to pseudocode that describes strategy selection in the problem
+    //domain
     private Advisor getAdvisor() {
         if (advisor == null) {
             if (promotionAdvisor.hasItem())

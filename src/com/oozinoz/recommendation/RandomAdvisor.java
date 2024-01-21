@@ -16,6 +16,8 @@ import com.oozinoz.firework.Firework;
 /**
  * Implement the Advisor interface, recommending a random firework.
  */
+
+// TODO: 1/21/2024 STRATEGY Design Pattern - using startegy
 public class RandomAdvisor implements Advisor {
     /**
      * @param c the customer
