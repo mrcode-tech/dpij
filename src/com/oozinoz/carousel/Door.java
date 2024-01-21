@@ -18,6 +18,10 @@ import java.util.Observable;
  * that manages its state without moving state-specific
  * logic out to state classes.
  */
+
+// TODO: 1/20/2024 State Design Pattern - without state design pattern
+// The code for Door is somewhat complex because the use of the state variable is spread throughout the class.
+// To apply STATE in this example, make each state of the door a separate class
 public class Door extends Observable {
     public final int CLOSED = -1;
     public final int OPENING = -2;
@@ -31,6 +35,7 @@ public class Door extends Observable {
      * The carousel user has touched the carousel button. This "one touch"
      * button elicits different behaviors, depending on the state of the door.
      */
+    //The setState() method of the Door class notifies observers of the door’s change
     public void touch() {
         switch (state)
         {
@@ -72,6 +77,7 @@ public class Door extends Observable {
     /**
      * @return a textual description of the door's state
      */
+    //(You might choose to use an enumerated type if you’re using Java 5.)
     public String status()
     {
         switch (state)
@@ -89,6 +95,7 @@ public class Door extends Observable {
         }
     }
 
+    //The setState() method of the Door class notifies observers of the door’s change
     private void setState(int state)
     {
         this.state = state;

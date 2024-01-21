@@ -12,6 +12,11 @@ package com.oozinoz.carousel;
  */
 
 /** Model the behavior of a carousel door when it's opening. */
+// TODO: 1/20/2024 State Design Pattern - solution 1
+//creates a special class for each
+//state that the door might be in. Each of these classes contains the
+//logic for responding to a touch of the one-touch button while the
+//door is in a specific state.
 public class DoorOpening extends DoorState {
     public DoorOpening(Door2 door) {
         super(door);
@@ -20,6 +25,9 @@ public class DoorOpening extends DoorState {
     /**
      * Stop opening and start closing the door.
      */
+    //The design at play here requires each state
+    //object to hold a reference to a Door2 object so that the state object
+    //can inform the door of state transitions
     public void touch() {
         door.setState(door.CLOSING);
     }

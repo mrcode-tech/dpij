@@ -14,6 +14,11 @@ package com.oozinoz.carousel;
 /**
  * Model the behavior of a carousel door when it's closed.
  */
+// TODO: 1/20/2024 State Design Pattern - solution 1
+//creates a special class for each
+//state that the door might be in. Each of these classes contains the
+//logic for responding to a touch of the one-touch button while the
+//door is in a specific state.
 public class DoorClosed extends DoorState {
     public DoorClosed(Door2 door) {
         super(door);
