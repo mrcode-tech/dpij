@@ -21,6 +21,10 @@ package com.oozinoz.robotInterpreter2;
 *  purpose. All subclasses must implement an execute()
 *  command, which is abstract here.
 */
+//Users of the Command and Term hierarchies can compose arbitrarily
+//rich, complex “programs” of execution. For example, it is not too difficult
+//to create an object that, when it executes, unloads all the material
+//from all the machines, except unload buffers, in a factory
 public abstract class Command {
     /**
     *  Perform the request encapsulated in this command.

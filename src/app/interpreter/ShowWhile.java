@@ -17,6 +17,9 @@ import com.oozinoz.robotInterpreter2.*;
 /**
  * Show the use of a "while" interpreter.
  */
+//If we add classes that control the flow of logic, such as an IfCommand
+//class and a WhileCommand, we can build a rich interpreter. These
+//classes will require a way to model a Boolean condition
 public class ShowWhile {
     public static void main(String[] args) {
         MachineComposite dublin = OozinozFactory.dublin();

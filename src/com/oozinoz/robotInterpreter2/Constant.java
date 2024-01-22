@@ -10,7 +10,7 @@ package com.oozinoz.robotInterpreter2;
  * Please use this software as you wish with the sole
  * restriction that you may not claim that you wrote it.
  */
-
+// TODO: 1/22/2024 Interpreter Design Pattern - ForCommand
 import com.oozinoz.machine.Machine;
 
 /**

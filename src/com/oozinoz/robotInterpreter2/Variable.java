@@ -17,6 +17,7 @@ import com.oozinoz.machine.Machine;
 *  Record a name that can be used to assign and look up a
 *  machine.
 */
+// TODO: 1/22/2024 Interpreter Design Pattern - ForCommand
 public class Variable extends Term {
     protected String name;
     protected Term value;

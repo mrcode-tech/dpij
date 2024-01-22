@@ -37,6 +37,7 @@ public class Equals extends Term {
      * @return null if this term's subterms evaluate to different machines.
      *         Otherwise return the machine.
      */
+    //The Equals class compares two terms and returns null to indicate false
     public Machine eval() {
         Machine m1 = term1.eval();
         Machine m2 = term2.eval();

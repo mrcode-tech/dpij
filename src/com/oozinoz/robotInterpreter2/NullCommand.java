@@ -14,6 +14,8 @@ package com.oozinoz.robotInterpreter2;
 /**
 *  This class does nothing when it executes.
 */
+//The NullCommand class is useful for when we need a command that
+//does nothing
 public class NullCommand extends Command {
     /**
     *  Do nothing.

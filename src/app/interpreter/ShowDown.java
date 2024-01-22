@@ -18,6 +18,10 @@ import com.oozinoz.robotInterpreter2.*;
 *  Show the construction and use of a (tiny) interpreter that shuts
 *  down all the machines at a particular plant.
 */
+// TODO: 1/22/2024 Interpreter Design Pattern - ForCommand
+//For example, here is a program
+//that composes an interpreter object that shuts down all the
+//machines in a factory
 class ShowDown {
     public static void main(String[] args) {
         MachineComposite dublin = OozinozFactory.dublin();

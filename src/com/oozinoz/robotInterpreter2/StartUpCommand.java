@@ -17,6 +17,7 @@ import com.oozinoz.machine.Machine;
 *  This class represents a command to start up a machine
 *  indicated by a provided term.
 */
+// TODO: 1/22/2024 Interpreter Design Pattern - ForCommand
 public class StartUpCommand extends Command {
     protected Term term;
 
@@ -34,6 +35,8 @@ public class StartUpCommand extends Command {
     *  Evaluate this object's term to a machine and shut down
     *  that machine.
     */
+    //For example, the StartUpCommand code can arrange to work with a Term
+    //object rather than with a specific machine, as follows
     public void execute() {
         Machine m = term.eval();
         m.startup();

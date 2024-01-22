@@ -15,6 +15,9 @@ package com.oozinoz.robotInterpreter2;
 *  This class represents a "while" statement that will execute
 *  its body so long as its term evaluates to a non-null value.
 */
+//If we add classes that control the flow of logic, such as an IfCommand
+//class and a WhileCommand, we can build a rich interpreter. These
+//classes will require a way to model a Boolean condition.
 public class WhileCommand extends Command {
     protected Term term;
 

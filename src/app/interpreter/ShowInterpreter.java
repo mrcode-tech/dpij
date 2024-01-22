@@ -17,6 +17,7 @@ import com.oozinoz.robotInterpreter.*;
 /**
  * Demonstrate an initial carry command.
  */
+// TODO: 1/22/2024 Interpreter Design Pattern
 public class ShowInterpreter {
     public static void main(String[] args) {
         MachineComposite dublin = OozinozFactory.dublin();
@@ -34,6 +35,19 @@ public class ShowInterpreter {
         seq.add(carry1);
         seq.add(carry2);
 
+        //this hierarchy’s design requires that Command subclasses
+        //reinterpret the meaning of the execute() operation
+        //This is the intent of INTERPRETER: to allow you to compose executable objects.
+
+        //A typical INTERPRETER hierarchy will include more than two subclasses,
+        //and we will extend the Command hierarchy shortly
+
+        //A CommandSequence object interprets the execute() operation by forwarding
+        //the call to each subcommand
+
         seq.execute();
+//        or with out Ineterpreter and using only command pattern
+//        carry1.execute();
+//        carry2.execute();
     }
 }

@@ -13,7 +13,15 @@ package com.oozinoz.robotInterpreter;
 
 import java.util.ArrayList;
 import java.util.List;
-
+// TODO: 1/22/2024 Interpreter Design Pattern
+//The intent of the INTERPRETER pattern is to let you compose
+//executable objects from a hierarchy of classes that provide various
+//interpretations of a common operation. The intent of COMMAND is
+//merely to encapsulate a request in an object.
+//Can an interpreter object function as a command? Sure! The question
+//of which pattern applies depends on your intent. Are you creating a
+//toolkit for composing executable objects, or are you encapsulating a
+//request in an object?
 /**
 *  This class contains a sequence of other commands.
 */
@@ -50,6 +58,8 @@ public class CommandSequence extends Command {
     /**
     *  Ask each command in the sequence to execute.
     */
+    //A CommandSequence object interprets the execute() operation by forwarding
+    //the call to each subcommand
     public void execute() {
         for (Command command : commands) {
             command.execute();

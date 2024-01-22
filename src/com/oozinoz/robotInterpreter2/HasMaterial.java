@@ -35,6 +35,10 @@ public class HasMaterial extends Term {
      * @return null if this term's subterm evaluates to a machine that has no
      *         material. Otherwise return the machine.
      */
+    //We might introduce a new hierarchy of terms,
+    //but it may be simpler to borrow an idea from the C language: Let null
+    //represent falsity and anything else represent truth. With this idea in
+    //mind, we can extend the Term hierarchy
     public Machine eval() {
         Machine m = term.eval();
         return m.hasMaterial() ? m : null;

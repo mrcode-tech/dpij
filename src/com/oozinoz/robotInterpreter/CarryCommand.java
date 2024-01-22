@@ -17,6 +17,10 @@ import com.oozinoz.machine.Machine;
 *  Carry a bin from one machine to another, allowing for
 *  machines to be referred to with variable names.
 */
+
+// TODO: 1/22/2024 Interpreter Design Pattern
+//The intent of the INTERPRETER pattern is to let you compose executable
+//objects according to a set of composition rules that you define
 public class CarryCommand extends Command {
     protected Machine fromMachine;
 

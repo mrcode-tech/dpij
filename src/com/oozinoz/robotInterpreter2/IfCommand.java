@@ -16,6 +16,10 @@ package com.oozinoz.robotInterpreter2;
 *  one of two commands depending on the value of a supplied
 *  conditional term.
 */
+
+//If we add classes that control the flow of logic, such as an IfCommand
+//class and a WhileCommand, we can build a rich interpreter. These
+//classes will require a way to model a Boolean condition.
 public class IfCommand extends Command {
     protected Term term;
     protected Command body;
