@@ -17,6 +17,7 @@ package aster2;
  * 
  * The "Command" chapter in "Design Patterns in Java" describes this class.
  */
+// TODO: 1/22/2024 Command Design pattern - sample COMMAND Hooks - with command - without template method
 public class AsterStarPress {
     public Hook moldIncompleteHook;
     
@@ -61,6 +62,11 @@ public class AsterStarPress {
      * Stop processing, mark the current mold as incomplete, move off all molds,
      * discharge any prepared paste, and flush the processing area with water.
      */
+
+    //In the original AsterStarPress class, the shutDown() method relied
+    //on a step that subclasses would provide. In the new design, the
+    //shutDown() method now uses a hook to execute client code after processing
+    //stops but before completing the shutdown process:
     public void shutDown() {
         if (inProcess()) {
             stopProcessing();

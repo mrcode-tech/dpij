@@ -13,6 +13,9 @@ package com.oozinoz.utility;
 
 import com.oozinoz.robotInterpreter.Command;
 
+// TODO: 1/22/2024 Command Design pattern - Using COMMAND to Supply a Service
+//Suppose that you want to let developers time how long a method
+//takes to execute.
 public class CommandTimer {
     public static long time(Command command) {
         long t1 = System.currentTimeMillis();

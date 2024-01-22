@@ -15,6 +15,7 @@ import aster2.*;
 
 import com.oozinoz.businessCore.*;
 
+// TODO: 1/22/2024 Command Design pattern - sample COMMAND Hooks - with command - without template method
 public class ShowHook {
    public static void main(String[] args) {
       AsterStarPress p = new AsterStarPress();

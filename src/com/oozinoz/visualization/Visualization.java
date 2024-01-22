@@ -34,6 +34,8 @@ import com.oozinoz.ui.UI;
 
 //The visualization changes factory events into GUI changes.
 //The mediator translates GUI events into factory changes.
+
+// TODO: 1/22/2024 Command Design pattern - Command + Mediator
 public class Visualization extends JPanel implements ChangeListener {
 	protected UI ui;
 
@@ -94,6 +96,11 @@ public class Visualization extends JPanel implements ChangeListener {
 			undoButton.setEnabled(false);
 			//This code passes responsibility for handling a click to the mediator.
 			//The mediator informs the factory model of any requested changes
+
+			//This code applies COMMAND, packaging an undo() method in an
+			//instance of the ActionListener class. This code also applies MEDIATOR,
+			//letting a central object mediate events that pertain to an underlying
+			//object model.
 			undoButton.addActionListener(mediator.undoAction());
 		}
 		return undoButton;

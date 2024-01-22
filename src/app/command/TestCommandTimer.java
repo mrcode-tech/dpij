@@ -16,10 +16,17 @@ import com.oozinoz.utility.CommandTimer;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertTrue;
-
+// TODO: 1/22/2024 Command Design pattern - Using COMMAND to Supply a Service
+//The COMMAND pattern lets you encapsulate a request in an object,
+//allowing you to manage method calls as objects, passing them and
+//invoking them when the timing or conditions are right
 public class TestCommandTimer {
     @Test
     public void testSleep() {
+
+        //This abstract class represents a hierarchy of classes
+        //that encapsulate commands. A command object is a request
+        //that is dormant until a caller asks it to execute.
         Command doze = new Command() {
             public void execute() {
                 try {

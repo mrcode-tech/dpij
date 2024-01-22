@@ -16,6 +16,9 @@ import aster.AsterStarPress;
 import com.oozinoz.businessCore.*;
 
 // TODO: 1/20/2024 TEMPLATE METHOD Design Pattern - Completing an Algorithm - AsterStarPress
+
+// TODO: 1/22/2024 Command Design pattern - sample COMMAND Hooks - without command - using template method
+
 public class OzAsterStarPress extends AsterStarPress {
     /**
     *  Override the superclass to have our robot collect the
@@ -41,6 +44,11 @@ public class OzAsterStarPress extends AsterStarPress {
     */
     //Write the code for the markMoldIncomplete() method of the
     //OzAsterStarPress class:
+
+    //You might find it inconvenient to subclass AsterStarPress with a
+    //class that you have to move to the star press’s onboard computer.
+    //Suppose that you ask the developers at Aster to provide the hook in a
+    //different way, using the COMMAND pattern.
     public void markMoldIncomplete(int id) {
         getManager().setMoldIncomplete(id);
     }

@@ -11,6 +11,9 @@ package aster2;
  * restriction that you may not claim that you wrote it.
  */
 
+// TODO: 1/22/2024 Command Design pattern - sample COMMAND Hooks - with command - without template method
+//A class can provide a hook—a way to insert custom code—by invoking
+//a supplied command at a specific point in a procedure.
 public interface Hook {
     void execute(AsterStarPress p);
 }
