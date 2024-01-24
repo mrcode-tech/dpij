@@ -20,6 +20,9 @@ import com.oozinoz.filter.WrapFilter;
  * Show filters that wrap and title-case the characters in a file supplied on
  * the command line.
  */
+// TODO: 1/24/2024 DECORATOR Design Pattern - OozinozFilter - WrapFilter
+//Input/output streams provide a classic example of how the DECORATOR
+//pattern lets you assemble the behavior of an object at runtime.
 public class ShowFilters {
     public static void main(String[] args) throws IOException {
         BufferedReader in = new BufferedReader(new FileReader(args[0]));

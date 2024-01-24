@@ -18,6 +18,11 @@ import java.io.*;
  * upper case.
  * @author Steven J. Metsker
  */
+// TODO: 1/24/2024 DECORATOR Design Pattern - OozinozFilter
+//The theme of these filters is the same: The development task consists
+//of overriding the appropriate write() methods. The write() methods
+//decorate the received stream of text and pass the modified text on
+//to a subordinate stream.
 public class TitleCaseFilter extends OozinozFilter {
     boolean inWhite = true;
 
@@ -38,6 +43,7 @@ public class TitleCaseFilter extends OozinozFilter {
      */
     public void write(int c) throws IOException {
         out.write(inWhite ? Character.toUpperCase((char) c) : Character.toLowerCase((char) c));
+        //This part checks if the character c is equal to the double quote ("). It's a simple equality check.
         inWhite = Character.isWhitespace((char) c) || c == '"';
     }
 }

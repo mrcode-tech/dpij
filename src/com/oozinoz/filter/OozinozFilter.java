@@ -19,7 +19,20 @@ import java.io.*;
  * 
  * @author Steven J. Metsker
  */
+// TODO: 1/24/2024 DECORATOR Design Pattern - OozinozFilter
+//The OozinozFilter class will be the parent for classes that decorate output character streams
+
+//This code is all we need to start putting DECORATOR to work. Subclasses
+//of OozinozFilter can supply new implementations of write(:int)
+//that modify a character before passing it on to the underlying
+//stream’s write(:int) method.
 public abstract class OozinozFilter extends FilterWriter {
+
+    //To create a toolkit of composable output streams, the next step is to
+    //introduce a filter superclass that has several critical attributes. The filter class will
+    //• Accept in its constructor a Writer object
+    //• Act as the superclass of a filter hierarchy
+    //• Provide default implementations of all Writer methods except write(:int)
     protected OozinozFilter(Writer out) {
         super(out);
     }
@@ -47,6 +60,8 @@ public abstract class OozinozFilter extends FilterWriter {
      * 
      * @throws IOException if an I/O error occurs
      */
+    //We will define a filter class that accepts a writer in its constructor and
+    //that mixes in new behaviors in its write() methods.
     public abstract void write(int c) throws IOException;
 
     /**

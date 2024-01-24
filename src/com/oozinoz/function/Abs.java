@@ -14,6 +14,13 @@ package com.oozinoz.function;
 /**
  * Wrap the Math.Abs() function around a given source.
  */
+
+// TODO: 1/24/2024 DECORATOR Design Pattern - Function Wrappers
+//The Cos class constructor expects a Function argument and passes
+//this argument up to the superclass constructor, where the argument is
+//stored in the sources array. The Cos.f() method evaluates the source
+//function at time t, passes this value to Math.Cos(), and returns the
+//result.
 public class Abs extends Function {
     /**
      * Construct an absolute value function that decorates the provided source

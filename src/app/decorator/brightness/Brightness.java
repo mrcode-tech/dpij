@@ -13,6 +13,18 @@ package app.decorator.brightness;
 
 import com.oozinoz.function.Function;
 
+// TODO: 1/24/2024 DECORATOR Design Pattern - Function Wrappers - sample 3 - brightness function with decorator = exp(–4t) * sin(π*t)
+//Write the code to define a Brightness object that represents the
+//brightness function.
+
+
+//The mechanics of DECORATOR include a common operation implemented
+//across a hierarchy. In this regard, DECORATOR is similar to STATE,
+//STRATEGY, and INTERPRETER. In DECORATOR, classes also usually have a
+//constructor that requires another, subordinate decorator object. DECORATOR
+//resembles COMPOSITE in this regard. DECORATOR also resembles
+//PROXY, in that decorator classes typically implement the common
+//operation by forwarding the call to the subordinate decorator object.
 public class Brightness extends Function {
     public Brightness(Function f) {
         super(f);

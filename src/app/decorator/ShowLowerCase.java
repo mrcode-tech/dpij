@@ -20,6 +20,7 @@ import com.oozinoz.filter.LowerCaseFilter;
 /**
  * Show how to use a lower case filter.
  */
+// TODO: 1/24/2024 DECORATOR Design Pattern - OozinozFilter - LowerCaseFilter show case
 public class ShowLowerCase {
     public static void main(String[] args) throws IOException {
         Writer out = new ConsoleWriter();

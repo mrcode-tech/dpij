@@ -14,6 +14,9 @@ package com.oozinoz.function;
 /**
  * Wrap an arithmetic function around a pair of supplied sources.
  */
+
+// TODO: 1/24/2024 DECORATOR Design Pattern - Function Wrappers
+//The Arithmetic class accepts an operator indicator that it applies in its f() method.
 public class Arithmetic extends Function {
     protected char op;
 

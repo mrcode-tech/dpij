@@ -24,6 +24,13 @@ package com.oozinoz.function;
  * goes 0 to the base of the arc and y goes 0 to the apogee (at t = .5) and back
  * to 0.
  */
+
+// TODO: 1/24/2024 DECORATOR Design Pattern - Function Wrappers
+
+//In the case of function wrappers, no existing class like Writer already
+//implements the operation that we need. As a result, there is no real
+//need for an IFunction interface. We can more simply define the
+//Function hierarchy without this interface
 public abstract class Function {
     protected Function[] sources;
 
@@ -33,6 +40,9 @@ public abstract class Function {
      * @param f
      *            the source function that this function wraps
      */
+    //instead of accepting a single IFunction object, the
+    // class accepts an array. Some functions, such as arithmetic functions,
+    // will require more than one subordinate function to work from
     public Function(Function f) {
         // This is commonly used in Java when you want to create an array with initial values without explicitly specifying the array size.
         // It's a concise way to create and initialize an array in a single line of code.

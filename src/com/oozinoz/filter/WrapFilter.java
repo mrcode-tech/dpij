@@ -28,6 +28,10 @@ import java.util.*;
  * are indicated.
  * @author Steven J. Metsker
  */
+// TODO: 1/24/2024 DECORATOR Design Pattern - OozinozFilter - WrapFilter
+//The code for the WrapFilter class is considerably more complex than
+//the other filters. It offers to center its output and thus must buffer and
+//count characters before passing them to its subordinate stream
 public class WrapFilter extends OozinozFilter {
     protected int lineLength;
     protected StringBuilder lineBuf = new StringBuilder();

@@ -16,7 +16,11 @@ import java.io.Writer;
 /**
 *  This "filter" directs its characters to the console.
 */
+// TODO: 1/24/2024 DECORATOR Design Pattern - OozinozFilter
 public class ConsoleWriter extends Writer {
+    //The other methods in the Oozinoz-
+    //Filter class supply the behavior that subclasses will usually want.
+    //The class simply leaves close() and flush() calls to its parent (FilterWriter).
     public void close() {}
     public void flush() {}
     

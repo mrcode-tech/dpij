@@ -19,6 +19,7 @@ import com.oozinoz.ui.SwingFacade;
  * 
  * @author Steven J. Metsker
  */
+// TODO: 1/24/2024 DECORATOR Design Pattern - Function Wrappers - sample 2 - brightness = exp(–4t) * sin(π*t)
 public class ShowBrightness {
    public static void main(String[] args) {
         FunPanel panel = new FunPanel();
