@@ -51,6 +51,7 @@ public class ProcessSequence extends ProcessComposite {
     *  ProcessSequence.
     * @param v the visitor
     */
+    // TODO: 1/27/2024 Visitor Design Pattern -sample 3- VISITOR Cycles - PrettyVisitor
     public void accept(ProcessVisitor v)
     {
         v.visit(this);

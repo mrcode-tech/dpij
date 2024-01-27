@@ -21,10 +21,17 @@ package com.oozinoz.machine;
  * @author Steven J. Metsker
  *  
  */
+// TODO: 1/27/2024 Visitor Design Pattern
 public interface MachineVisitor {
     /**
      * @param m the machine to visit
      */
+    //As we shall see, though, it is important for each class that implements
+    //accept() to appear as an argument in a visit() method declared in
+    //the visitor interface.
+    //The accept() methods in the MachineComponent, together with the
+    //MachineVisitor interface, invite developers to provide new operations
+    //to the hierarchy.
     void visit(Machine m);
 
     /**

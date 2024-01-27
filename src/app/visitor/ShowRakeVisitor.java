@@ -22,6 +22,7 @@ import com.oozinoz.filter.WrapFilter;
  * @author Steven J. Metsker
  * @see app.visitor.RakeVisitor
  */
+// TODO: 1/27/2024 Visitor Design Pattern -sample 2- finds all the machines—the leaf nodes—in a machine component Visitor
 public class ShowRakeVisitor {
     public static void main(String[] args) throws IOException {
         MachineComponent f = OozinozFactory.dublin();

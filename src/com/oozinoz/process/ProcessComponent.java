@@ -23,6 +23,8 @@ import com.oozinoz.iterator.ComponentIterator;
  * manufacturing something, notably fireworks.
  */
 // TODO: 1/26/2024 Iterator Design Pattern - sample Iterating over a Composite
+
+// TODO: 1/27/2024 Visitor Design Pattern -sample 3- VISITOR Cycles - PrettyVisitor
 public abstract class ProcessComponent implements AcycliclyIterable<ProcessComponent> {
     protected String name;
 
@@ -42,6 +44,15 @@ public abstract class ProcessComponent implements AcycliclyIterable<ProcessCompo
      * @param v
      *            the visitor
      */
+    //The developers of the ProcessComponent hierarchy built in support
+    //for VISITOR by including accept() methods in the hierarchy and by
+    //defining the ProcessVisitor interface
+
+    //One solution is to add a Set argument to all the accept() and
+    //visit() methods, so that the set of visited nodes gets passed around.
+    //The ProcessComponent class should then have a concrete accept()
+    //method that calls its abstract accept() method, passing it a new Set
+    //object:
     public abstract void accept(ProcessVisitor v);
 
     /**

@@ -16,10 +16,16 @@ package com.oozinoz.machine;
  * of the factories' machines.
  */
 // TODO: 1/5/2024 4- composite design pattern
+
+// TODO: 1/27/2024 Visitor Design Pattern
 public class OozinozFactory {
     /**
      * @return a model of the machines in our Dublin facility.
      */
+    // TODO: 1/27/2024 Visitor Design Pattern
+    //the new factory’s machine composition and have made this model
+    //accessible as the static dublin() method of the OozinozFactory
+    //class.
     public static MachineComposite dublin() {
         MachineRoot root = new MachineRoot(0, new Engineer(4096));
         root.setName(" Factory Dublin");

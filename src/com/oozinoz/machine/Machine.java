@@ -27,6 +27,7 @@ import com.oozinoz.utility.Queue;
  *  
  */
 // TODO: 1/7/2024  Mediator design pattern - Mediators of Relational Integrity
+// TODO: 1/27/2024 Visitor Design Pattern
 public abstract class Machine extends MachineComponent {
 
     protected Queue<Bin> bins = new Queue<>();
@@ -196,6 +197,16 @@ public abstract class Machine extends MachineComponent {
      * @param v
      *            a visitor that will add some sort of behavior
      */
+    // TODO: 1/27/2024 Visitor Design Pattern
+    //The accept() method in the MachineComponent class is abstract
+    //Both subclasses implement this method with exactly the same code:
+    // The difference is in the type of the this object. The accept() method
+    //calls the visit() method of a MachineVisitor object. The accept()
+    //method in the Machine class will look up a visit() method with the
+    //signature visit(:Machine), whereas the accept() method in the
+    //MachineComposite class will look up a method with the signature
+    //visit(:MachineComposite).
+
     public void accept(MachineVisitor v) {
         v.visit(this);
     }

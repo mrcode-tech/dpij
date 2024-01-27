@@ -17,9 +17,15 @@ import com.oozinoz.process.ShellProcess;
 /**
  * Show the use of the PrettyVisitor class.
  */
+// TODO: 1/27/2024 Visitor Design Pattern -sample 3- VISITOR Cycles - PrettyVisitor
 public class ShowPrettyVisitor {
 
     public static void main(String[] args) {
+        //This output is more informative that the printout we achieved by
+        //simply iterating over the process model. The one question mark that
+        //appears signals that this composite’s steps are alternatives. Also,
+        //showing the Make step a second time, followed by an ellipsis, is more
+        //clear than simply omitting a repeated step.
         ProcessComponent p = ShellProcess.make();
         PrettyVisitor v = new PrettyVisitor();
         System.out.println(v.getPretty(p));

@@ -21,6 +21,7 @@ import java.util.*;
  * @author Steven J. Metsker
  * @see app.visitor.ShowRakeVisitor
  */
+// TODO: 1/27/2024 Visitor Design Pattern -sample 2- finds all the machines—the leaf nodes—in a machine component Visitor
 public class RakeVisitor implements MachineVisitor {
     private Set<MachineComponent> leaves;
 

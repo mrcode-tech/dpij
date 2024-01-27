@@ -16,6 +16,7 @@ import java.util.List;
 /**
  * Represent an "alternation" (a choice) of process steps.
  */
+// TODO: 1/27/2024 Visitor Design Pattern -sample 3- VISITOR Cycles - PrettyVisitor
 public class ProcessAlternation extends ProcessComposite {
     /**
      * Create an alternation with the given name.

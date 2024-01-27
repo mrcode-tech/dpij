@@ -24,6 +24,24 @@ import com.oozinoz.iterator.ComponentIterator;
  *  
  */
 // TODO: 1/5/2024 4- composite design pattern
+// TODO: 1/27/2024 Visitor Design Pattern
+//The intent of VISITOR is to let you define a new operation for a hierarchy
+//without changing the hierarchy classes.
+
+//The VISITOR pattern lets a small amount of forethought in developing
+//a class hierarchy open a gateway to an unlimited variety of extensions
+//that can be made by a developer who lacks access to the source code.
+//The mechanics of the VISITOR pattern are as follows:
+
+//• Add an accept() operation to some or all of the classes in a class
+//hierarchy. Every implementation of this method will accept an
+//argument whose type is an interface that you will create.
+
+//• Create an interface with a set of operations that share a common
+//name—usually, visit—but that have different argument types.
+//Declare one such operation for each class in the hierarchy for
+//which you will allow extensions.
+
 public abstract class MachineComponent implements AcycliclyIterable<MachineComponent> {
     protected int id = 0;
     protected String name;
@@ -61,6 +79,8 @@ public abstract class MachineComponent implements AcycliclyIterable<MachineCompo
   /**
      * @param visitor a visitor that will add some sort of behavior
      */
+  // TODO: 1/27/2024 Visitor Design Pattern
+  //The accept() method in the MachineComponent class is abstract
     public abstract void accept(MachineVisitor visitor);
 
     /**

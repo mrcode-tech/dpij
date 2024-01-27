@@ -27,6 +27,10 @@ import com.oozinoz.process.*;
  * component is cyclic. On encountering a node a second time, this visitor will
  * print an ellipsis (...).
  */
+// TODO: 1/27/2024 Visitor Design Pattern -sample 3- VISITOR Cycles - PrettyVisitor
+//Unlike machine composites, it is natural for process
+//flows to contain cycles, and visitors must take care not to cause
+//infinite loops while traversing process composites
 public class PrettyVisitor implements ProcessVisitor {
     public static final String INDENT_STRING = "    ";
 
@@ -38,6 +42,8 @@ public class PrettyVisitor implements ProcessVisitor {
      * @param pc the process component to portray
      * @return a pretty (indented) description of the supplied process component.
      */
+    //This class uses a getPretty() method to initialize an instance’s variables
+    //and to kick off the visitor algorithm.
     public StringBuilder getPretty(ProcessComponent pc) {
         sb = new StringBuilder();
         visited = new HashSet<>();
@@ -46,6 +52,8 @@ public class PrettyVisitor implements ProcessVisitor {
         return sb;
     }
 
+    //The printIndentedString() method handles the indentation of steps as the algorithm
+    //goes deeper and deeper into a composite.
     protected void printIndentedString(String s) {
         for (int i = 0; i < depth; i++) 
             sb.append(INDENT_STRING);
@@ -57,6 +65,7 @@ public class PrettyVisitor implements ProcessVisitor {
      * Add a step to the output buffer.
      * @param s the step
      */
+    //When visiting a ProcessStep object, the code simply prints the step’s name:
     public void visit(ProcessStep s) {
         printIndentedString(s.getName());
     }
@@ -85,6 +94,18 @@ public class PrettyVisitor implements ProcessVisitor {
      * @param prefix a possible prefix
      * @param c the composite to display
      */
+    //These developers are well
+    //aware of the need to avoid infinite loops while traversing process
+    //flows. As the PrettyVisitor class shows, the developers of the visitor
+    //also have to be aware of the potential for cycles in process components.
+    //It might help prevent errors if the ProcessComponent
+    //developers could provide some degree of cycle-management support
+    //as part of their support of VISITOR.
+
+    //Now visitor developers must create classes with visit() methods that
+    //accept the visited set. This is a significant hint that using the set is a
+    //good idea, although the visitor developer retains the responsibility for
+    //populating the set.
     protected void visitComposite(String prefix, ProcessComposite c) {
         if (visited.contains(c)) {
             printIndentedString(prefix + c.getName() + "...");

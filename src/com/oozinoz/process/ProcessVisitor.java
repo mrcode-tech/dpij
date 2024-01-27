@@ -20,6 +20,7 @@ package com.oozinoz.process;
 *  that operate differently on different type of process
 *  components.
 */
+// TODO: 1/27/2024 Visitor Design Pattern -sample 3- VISITOR Cycles - PrettyVisitor
 public interface ProcessVisitor {
     /**
     *  Visit a process alternation.

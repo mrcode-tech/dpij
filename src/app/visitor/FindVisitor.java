@@ -21,6 +21,9 @@ import java.util.*;
  * @author Steven J. Metsker
  * @see app.visitor.ShowFindVisitor
  */
+// TODO: 1/27/2024 Visitor Design Pattern -sample 1- Find MachineComponent Visitor
+//The FindVisitor class effectively adds a find() operation to the
+//MachineComponent hierarchy.
 public class FindVisitor implements MachineVisitor {
     private int soughtId;
 
@@ -50,6 +53,17 @@ public class FindVisitor implements MachineVisitor {
      * Check if the provided composite is the sought machine component. If not,
      * check this composite's children.
      */
+    //When the visit(:MachineComposite) method executes, it invokes
+    //the accept() operation on each of the composite’s children. A child
+    //responds by invoking a visit() operation on the Visitor object.
+    //the short trip from the Visitor object to the
+    //object that receives the accept() invocation and back again picks up
+    //the type of the receiving object. This technique, known as double
+    //dispatch, ensures that the right visit() method of the Visitor class
+    //executes.
+
+    //The double dispatching in VISITOR lets you create visitor classes with
+    //methods that are specific to the various types in the visited hierarchy.
     public void visit(MachineComposite mc) {
         if (found == null && mc.getId() == soughtId) {
             found = mc;

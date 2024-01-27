@@ -26,6 +26,10 @@ import com.oozinoz.machine.MachineComposite;
  * 
  * @author Steven J. Metsker
  */
+// TODO: 1/27/2024 Visitor Design Pattern
+//To display this composite, the developers created a Machine-
+//TreeModel class to adapt the model’s information to a JTree object’s
+//needs.
 public class MachineTreeModel implements TreeModel {
     protected MachineComponent root;
 

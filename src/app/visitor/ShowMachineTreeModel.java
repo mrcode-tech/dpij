@@ -17,6 +17,15 @@ import javax.swing.JTree;
 import com.oozinoz.machine.OozinozFactory;
 import com.oozinoz.ui.SwingFacade;
 
+// TODO: 1/27/2024 Visitor Design Pattern
+//Displaying the factory’s machines requires building an instance of
+//MachineTreeModel from the factory composite and wrapping this
+//model in Swing components
+
+//Many useful behaviors for a machine composite are possible. For
+//example, suppose that you need to find a particular machine within
+//the factory model. To add this ability without modifying the
+//MachineComponent hierarchy, you can create a FindVisitor class
 public class ShowMachineTreeModel {
 
     public ShowMachineTreeModel() {
