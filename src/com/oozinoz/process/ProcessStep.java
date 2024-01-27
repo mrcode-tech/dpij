@@ -20,6 +20,7 @@ import com.oozinoz.iterator.LeafIterator;
 /**
  * Represent an individual process step.
  */
+// TODO: 1/26/2024 Iterator Design Pattern - sample Iterating over a Composite
 public class ProcessStep extends ProcessComponent {
     /**
      * Create a step with the given name.
@@ -40,6 +41,7 @@ public class ProcessStep extends ProcessComponent {
         v.visit(this);
     }
 
+    //The ProcessStep class implementation of iterator() will be:
     public ComponentIterator<ProcessComponent> iterator(Set<ProcessComponent> visited) {
         return new LeafIterator<>(this, visited);
     }

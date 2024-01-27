@@ -22,6 +22,7 @@ import com.oozinoz.iterator.ComponentIterator;
  * compositions of process steps. A process is essentially a recipe for
  * manufacturing something, notably fireworks.
  */
+// TODO: 1/26/2024 Iterator Design Pattern - sample Iterating over a Composite
 public abstract class ProcessComponent implements AcycliclyIterable<ProcessComponent> {
     protected String name;
 
@@ -50,6 +51,8 @@ public abstract class ProcessComponent implements AcycliclyIterable<ProcessCompo
         return name;
     }
 
+    //To update the ProcessComponent hierarchy so that we can enumerate
+    //it, we need to provide an iterator() method:
     public ComponentIterator<ProcessComponent> iterator() {
         return iterator(new HashSet<ProcessComponent>());
     }

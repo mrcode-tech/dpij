@@ -17,11 +17,21 @@ import java.util.*;
  * This is the abstract superclass of enumerators that can walk across leaf nodes
  * and composite nodes in a composite structure.
  */
+// TODO: 1/26/2024 Iterator Design Pattern - sample Iterating over a Composite - Adding Depth to a Composite Enumerator - Enumerating Leaves
 public abstract class ComponentIterator<E> implements Iterator<E> {
     protected E head;
 
+    //The design also uses a visited variable to keep track of nodes that we have already
+    //enumerated. This will keep us from stepping into an infinite loop
+    //when a composite has cycles.
     protected Set<E> visited;
 
+    //Suppose that we want to allow an enumeration to return only leaves.
+    //This can be useful if we are concerned with attributes that apply only
+    //to leaves, such as the time that a process step takes. We can add a
+    //returnInterior field to the ComponentIterator class to record
+    //whether interior (nonleaf) nodes should be returned from the
+    //enumeration
     protected boolean returnInterior = true;
 
     /**
@@ -46,6 +56,12 @@ public abstract class ComponentIterator<E> implements Iterator<E> {
      * @return the current depth of the iteration (number of nodes above the
      *         current node)
      */
+    //The output of this program might be more clear if we indented each
+    //process step in accordance with its depth in the model. We can define
+    //the depth of a leaf enumerator to be 0 and note that the current
+    //depth of a composite enumerator is 1 plus the depth of its subiterator.
+    //We can make the getDepth() abstract in the ComponentIterator
+    //superclass as follows:
     public abstract int getDepth();
 
     public void remove() {

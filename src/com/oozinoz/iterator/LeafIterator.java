@@ -13,11 +13,13 @@ package com.oozinoz.iterator;
 
 import java.util.Set;
 
+// TODO: 1/26/2024 Iterator Design Pattern - sample Iterating over a Composite - Adding Depth to a Composite Enumerator
 public class LeafIterator<E> extends ComponentIterator<E> {
     public LeafIterator(E head, Set<E> visited) {
         super(head, visited);
     }
 
+    //The code for a getDepth() method for the LeafIterator class is:
     public int getDepth() {
         return 0;
     }

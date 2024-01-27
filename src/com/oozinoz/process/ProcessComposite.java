@@ -22,6 +22,7 @@ import com.oozinoz.iterator.CompositeIterator;
 /**
  * Represent either an alternation or a sequence of process steps.
  */
+// TODO: 1/26/2024 Iterator Design Pattern - sample Iterating over a Composite
 public abstract class ProcessComposite extends ProcessComponent {
     protected List<ProcessComponent> subprocesses;
 
@@ -71,6 +72,9 @@ public abstract class ProcessComposite extends ProcessComponent {
         subprocesses.add(c);
     }
 
+    //The ProcessComponent class is abstract and leaves the iterator(:Set)
+    //method for subclasses to implement. For the ProcessComposite class,
+    //this code will look like
     public ComponentIterator<ProcessComponent> iterator(Set<ProcessComponent> visited) {
         return new CompositeIterator<>(this, subprocesses, visited);
     }

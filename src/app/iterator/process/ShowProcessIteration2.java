@@ -14,7 +14,7 @@ package app.iterator.process;
 import com.oozinoz.iterator.ComponentIterator;
 import com.oozinoz.process.ProcessComponent;
 import com.oozinoz.process.ShellProcess;
-
+// TODO: 1/26/2024 Iterator Design Pattern - sample Iterating over a Composite - Adding Depth to a Composite Enumerator
 public class ShowProcessIteration2 {
     public static void main(String[] args) {
         ProcessComponent pc = ShellProcess.make();
